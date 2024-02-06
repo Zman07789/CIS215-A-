@@ -1,0 +1,55 @@
+/* By Zackary Paulson */
+
+/*This CSS page gives my HTML page somfe simple syle and organizes the forms, fieldsets, legend label and bottons 
+so that they are stacked vertically  */
+body {
+    background-color: #333; 
+    color: white; 
+    font-family: Arial, sans-serif; 
+}
+
+h1 {
+    background-color: rgba(128, 128, 128, 0.5); 
+    padding: 10px; 
+}
+
+#tripForm {
+    display: flex;
+    flex-direction: column;
+    margin-left: 75px;
+    margin-top: 20px; 
+}
+
+fieldset {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+legend {
+    font-weight: bold;
+}
+
+label {
+    margin-bottom: 5px; 
+}
+
+input,
+textarea,
+select {
+    width: 200px; 
+    margin-bottom: 10px; 
+    padding: 5px; 
+}
+
+button {
+    background-color: #008CBA; 
+    color: white; 
+    padding: 10px; 
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background-color: #005E80; 
+}

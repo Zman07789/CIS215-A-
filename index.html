@@ -1,0 +1,155 @@
+<!-- By Zackary Paulson-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="NewLook.css"> <!-- Connects this to my CSS page -->
+    <title>Trip Management System</title>
+</head>
+<body>
+    <h1>Trip Management System</h1>
+    
+    <form id="tripForm" onsubmit="submitForm()">
+        
+        <!-- Trip Information -->
+        <fieldset>
+            <legend>Trip Information</legend> <!-- This is a title for my fieldset and why it's inside of the line in the boxes. Found on Stackoverflow-->
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="destination">Destination:</label>
+                <input type="text" id="destination" name="destination" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="startTime">Start Time:</label>
+                <input type="time" id="startTime" name="startTime" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="arrivalTime">Arrival Time:</label>
+                <input type="time" id="arrivalTime" name="arrivalTime" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="returnDate">Return Date:</label>
+                <input type="date" id="returnDate" name="returnDate">
+            </div>
+            
+            <div class="form-group">
+                <label for="returnStartTime">Return Start Time:</label>
+                <input type="time" id="returnStartTime" name="returnStartTime">
+            </div>
+            
+            <div class="form-group">
+                <label for="returnArrivalTime">Return Arrival Time:</label>
+                <input type="time" id="returnArrivalTime" name="returnArrivalTime">
+            </div>
+        </fieldset>
+        
+        <!-- Vehicle Information -->
+<fieldset>
+    <legend>Vehicle Information</legend>
+    <div class="form-group">
+        <label for="startingMileage">Starting Mileage:</label>
+        <input type="number" id="startingMileage" name="startingMileage" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="endingMileage">Ending Mileage:</label>
+        <input type="number" id="endingMileage" name="endingMileage" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="fuelLevel">Fuel Level:</label>
+        <input type="number" id="fuelLevel" name="fuelLevel" step="0.01" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="startingCondition">Starting Condition:</label>
+        <input type="text" id="startingCondition" name="startingCondition" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="endingCondition">Ending Condition:</label>
+        <input type="text" id="endingCondition" name="endingCondition" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="reportedIssues">Reported Issues:</label>
+        <textarea id="reportedIssues" name="reportedIssues"></textarea>
+    </div>
+    
+    <div class="form-group">
+        <label for="vehicleDestination">Vehicle Destination:</label>
+        <input type="text" id="vehicleDestination" name="vehicleDestination" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="reasonForTrip">Reason for Trip:</label>
+        <textarea id="reasonForTrip" name="reasonForTrip" required></textarea>
+    </div>
+</fieldset>
+
+<!-- Passenger Information -->
+<fieldset>
+    <legend>Passenger Information</legend>
+    <div class="form-group">
+        <label for="passengerName">Passenger's Name:</label>
+        <input type="text" id="passengerName" name="passengerName" required>
+    </div>
+
+    <div class="form-group">
+        <label for="passengerDob">Passenger's Date of Birth:</label>
+        <input type="date" id="passengerDob" name="passengerDob" required>
+    </div>
+
+    <div class="form-group">
+        <label for="passengerAddress">Passenger's Address:</label>
+        <input type="text" id="passengerAddress" name="passengerAddress" required>
+    </div>
+</fieldset>
+
+    <!-- Driver Information -->
+<fieldset>
+        <legend>Driver Information</legend>
+        <div class="form-group">
+            <label for="driverName">Driver's Name:</label>
+            <input type="text" id="driverName" name="driverName" required>
+        </div>
+
+        <div class="form-group">
+            <label for="driverDob">Driver's Date of Birth:</label>
+            <input type="date" id="driverDob" name="driverDob" required>
+        </div>
+
+        <div class="form-group">
+            <label for="driverAddress">Driver's Address:</label>
+            <input type="text" id="driverAddress" name="driverAddress" required>
+        </div>
+
+        <div class="form-group">
+            <label for="driverLicenseNumber">Driver's License Number:</label>
+            <input type="text" id="driverLicenseNumber" name="driverLicenseNumber" required>
+        </div>
+    </fieldset>
+ <!-- Past Trip Lookup Here-->
+    <legend>Past Trip Lookup</legend>
+        <div class="form-group">
+            <label for="driverQuery">Driver's Name for lookup:</label>
+            <input type="text" id="driverQuery" name="driverQuery">
+        </div>
+        <button type="button" onclick="queryTrips()">Lookup Past Trip</button>
+    </fieldset>
+
+    <button type="submit">Submit</button>
+    </form>
+
+    <script src="script.js"></script> <!-- This connects this page to my js page called "scripts.js"-->
+</body>
+</html>
+
